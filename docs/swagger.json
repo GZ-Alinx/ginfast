@@ -1,0 +1,156 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/user/list": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "tags": [
+                    "用户管理"
+                ],
+                "summary": "获取用户列表",
+                "parameters": [
+                    {
+                        "description": "查询用户参数",
+                        "name": "{object}",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/forms.UserListForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/user/login": {
+            "post": {
+                "tags": [
+                    "用户认证/登录/注册"
+                ],
+                "summary": "用户登录",
+                "parameters": [
+                    {
+                        "description": "登录用户名",
+                        "name": "{object}",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/forms.LoginForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/user/registry": {
+            "post": {
+                "tags": [
+                    "用户认证/登录/注册"
+                ],
+                "summary": "用户注册",
+                "parameters": [
+                    {
+                        "description": "注册参数",
+                        "name": "{object}",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/forms.UserRegistry"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "forms.LoginForm": {
+            "type": "object",
+            "required": [
+                "captcha",
+                "captcha_id",
+                "password",
+                "username"
+            ],
+            "properties": {
+                "captcha": {
+                    "description": "手机号验证\nMobile string `form:\"mobile\" json:\"mobile\" binding:\"required,mobile\"`",
+                    "type": "string",
+                    "maxLength": 5,
+                    "minLength": 5
+                },
+                "captcha_id": {
+                    "description": "验证码ID",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "密码  binding:\"required\"为必填字段,长度大于3小于20",
+                    "type": "string",
+                    "maxLength": 20,
+                    "minLength": 3
+                },
+                "username": {
+                    "description": "用户名",
+                    "type": "string"
+                }
+            }
+        },
+        "forms.UserListForm": {
+            "type": "object",
+            "required": [
+                "page",
+                "pagesize"
+            ],
+            "properties": {
+                "page": {
+                    "type": "integer"
+                },
+                "pagesize": {
+                    "type": "integer"
+                }
+            }
+        },
+        "forms.UserRegistry": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string"
+                },
+                "desc": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "integer"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+# settings-dev.yaml
+
+name: "ginjujin"
+port: 8080
+logsAddress: "./logs/"
+
+mysql:
+  username: "root"
+  host: "xxx"
+  port: 3306
+  password: "xxx"
+  dbname: "xxx"
+
+redis:
+  host: "xxx"
+  port: 6379
+  password: "xxx"
+  db: 01
+jwt:
+  key: "DEYsnfKMSf5XWk87VIlLASEdOp1d2ZqGksGrBLX"

@@ -1,0 +1,103 @@
+definitions:
+  forms.LoginForm:
+    properties:
+      captcha:
+        description: |-
+          手机号验证
+          Mobile string `form:"mobile" json:"mobile" binding:"required,mobile"`
+        maxLength: 5
+        minLength: 5
+        type: string
+      captcha_id:
+        description: 验证码ID
+        type: string
+      password:
+        description: 密码  binding:"required"为必填字段,长度大于3小于20
+        maxLength: 20
+        minLength: 3
+        type: string
+      username:
+        description: 用户名
+        type: string
+    required:
+    - captcha
+    - captcha_id
+    - password
+    - username
+    type: object
+  forms.UserListForm:
+    properties:
+      page:
+        type: integer
+      pagesize:
+        type: integer
+    required:
+    - page
+    - pagesize
+    type: object
+  forms.UserRegistry:
+    properties:
+      address:
+        type: string
+      desc:
+        type: string
+      mobile:
+        type: string
+      password:
+        type: string
+      role:
+        type: integer
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /user/list:
+    post:
+      parameters:
+      - description: 查询用户参数
+        in: body
+        name: '{object}'
+        required: true
+        schema:
+          $ref: '#/definitions/forms.UserListForm'
+      responses:
+        "200":
+          description: ""
+      security:
+      - ApiKeyAuth: []
+      summary: 获取用户列表
+      tags:
+      - 用户管理
+  /user/login:
+    post:
+      parameters:
+      - description: 登录用户名
+        in: body
+        name: '{object}'
+        required: true
+        schema:
+          $ref: '#/definitions/forms.LoginForm'
+      responses:
+        "200":
+          description: ""
+      summary: 用户登录
+      tags:
+      - 用户认证/登录/注册
+  /user/registry:
+    post:
+      parameters:
+      - description: 注册参数
+        in: body
+        name: '{object}'
+        required: true
+        schema:
+          $ref: '#/definitions/forms.UserRegistry'
+      responses:
+        "200":
+          description: ""
+      summary: 用户注册
+      tags:
+      - 用户认证/登录/注册
+swagger: "2.0"

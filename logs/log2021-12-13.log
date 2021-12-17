@@ -1,0 +1,499 @@
+2021-12-13T17:39:37.937+0800	INFO	middlewares/middlewares.go:32	/v1/user/listasdfsdf	{"status": 404, "method": "GET", "path": "/v1/user/listasdfsdf", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T17:40:11.198+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T17:52:07.395+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=1231312 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 39\r\nContent-Type: application/json\r\nPostman-Token: fe7c9b06-411f-4be8-8d01-c42053c2fed3\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0004049b0})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc000408120, 0x2ade68b0a28}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00041a5a0, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc000408120, 0xc000445110}, {0x122ef80, 0xc000408120, 0x102adebe20409}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc000408120})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc000408120})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc000408120})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00045c000, {0x11ccd20, 0xc0004080e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc00040c1c0}, {0x11ccd20, 0xc0004080e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc000410070, {0x11ccd20, 0xc0004080e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc000414300, {0x11ccd20, 0xc0004080e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc000414300)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc000414300)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000414300)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000414300)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc000414300)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc000458000}, 0xc000414200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc000458000}, 0xc000414200)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:52:07.397+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=1231312", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.5822ms"}
+2021-12-13T17:53:33.869+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 39\r\nContent-Type: application/json\r\nPostman-Token: c1544a4f-ccaf-4b2f-81c2-c2aaa3b1c4b2\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e67a0})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae020, 0x0}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a000, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae020, 0xc0003ae020}, {0x122ef80, 0xc0003ae020, 0x2ade6a4d701}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011a3c0, {0x11ccd20, 0xc0003ae000})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a4000}, {0x11ccd20, 0xc0003ae000})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d8090, {0x11ccd20, 0xc0003ae000})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae000})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a21c0}, 0xc0000ec100)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a21c0}, 0xc0000ec100)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:53:33.869+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.4137ms"}
+2021-12-13T17:53:41.074+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 39\r\nContent-Type: application/json\r\nPostman-Token: e6f4e01c-f5bc-4e24-9e4a-2422d31cf78f\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e6e70})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae100, 0xc000786f10}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a240, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae100, 0xc0003ae100}, {0x122ef80, 0xc0003ae100, 0x2ade6a4d708}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae100})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae100})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae100})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011a780, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a4140}, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d84b0, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a22a0}, 0xc0000ec300)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a22a0}, 0xc0000ec300)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:53:41.074+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.0169ms"}
+2021-12-13T17:53:41.892+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 39\r\nContent-Type: application/json\r\nPostman-Token: dcbedb03-b091-4ef0-8344-e3b0ae56701e\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e7010})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae1a0, 0xc000786f10}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a360, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae1a0, 0xc0003ae1a0}, {0x122ef80, 0xc0003ae1a0, 0x2ade6a4d70d}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae1a0})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae1a0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae1a0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011a8c0, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a41c0}, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d8790, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a2380}, 0xc0000ec400)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a2380}, 0xc0000ec400)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:53:41.892+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "689µs"}
+2021-12-13T17:53:42.814+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 39\r\nContent-Type: application/json\r\nPostman-Token: cdc7acd7-adc4-463a-8777-3a1d882cb0d8\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e71b0})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae220, 0xc000786f10}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a480, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae220, 0xc0003ae220}, {0x122ef80, 0xc0003ae220, 0x2ade6a4d711}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae220})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae220})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae220})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011aa00, {0x11ccd20, 0xc0003ae200})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a4240}, {0x11ccd20, 0xc0003ae200})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d8930, {0x11ccd20, 0xc0003ae200})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae200})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a2460}, 0xc0000ec500)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a2460}, 0xc0000ec500)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:53:42.814+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "788.3µs"}
+2021-12-13T17:55:00.836+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "461.1µs"}
+2021-12-13T17:55:08.472+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "82.6µs"}
+2021-12-13T17:55:18.893+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 50\r\nContent-Type: application/json\r\nPostman-Token: d8e90f9b-2883-49ef-a819-e05a637f82ee\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e7070})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae100, 0x2ade68b0598}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a360, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae100, 0xc0003ae100}, {0x122ef80, 0xc0003ae100, 0x2ade6a4d708}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae100})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae100})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae100})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011a8c0, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a4300}, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d8910, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae0e0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a2380}, 0xc0000ec400)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a2380}, 0xc0000ec400)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:55:18.894+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "789.2µs"}
+2021-12-13T17:56:52.692+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 50\r\nContent-Type: application/json\r\nPostman-Token: b1deb650-6da1-474f-a1fd-22b6cd0cc3c9\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e7270})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae1a0, 0xc000524f10}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a480, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae1a0, 0xc0003ae1a0}, {0x122ef80, 0xc0003ae1a0, 0x2ade6a4d70d}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae1a0})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae1a0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae1a0})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011aa00, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a4380}, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d8a70, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae160})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a2540}, 0xc0000ec600)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a2540}, 0xc0000ec600)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:56:52.693+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.4997ms"}
+2021-12-13T17:56:53.831+0800	ERROR	middlewares/middlewares.go:77	[Recovery from panic]	{"error": "Undefined validation function ' min' on field 'PassWord'", "request": "POST /v1/user/login?username=admin&password=123123 HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Basic YWRtaW46OG5CcFJKVmR4TzJLLWJMd2tUX1U3ZVJZb2Zibw==\r\nConnection: keep-alive\r\nContent-Length: 50\r\nContent-Type: application/json\r\nPostman-Token: eb7a414f-d630-4f3f-b000-8966e24dad59\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n", "stack": "goroutine 18 [running]:\nruntime/debug.Stack()\n\tD:/Go/src/runtime/debug/stack.go:24 +0x65\nginjujin/middlewares.GinRecovery.func1.1()\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:80 +0x2e6\npanic({0x11e4160, 0xc0003e6df0})\n\tD:/Go/src/runtime/panic.go:1038 +0x215\ngithub.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive(0xc00040e120, {0x11f57b4, 0x12a3741}, {0x11f5782, 0x8}, {0x0, 0x0}, 0x0)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289 +0xa2e\ngithub.com/go-playground/validator/v10.(*Validate).extractStructCache(0xc00040e120, {0x122ef80, 0xc0003ae060, 0x0}, {0x11bbca1, 0x11})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150 +0x511\ngithub.com/go-playground/validator/v10.(*validate).validateStruct(0xc00016a000, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae060, 0xc0003ae060}, {0x122ef80, 0xc0003ae060, 0x2ade6a4d703}, {0x13969b0, ...}, ...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37 +0x18e\ngithub.com/go-playground/validator/v10.(*Validate).StructCtx(0xc00040e120, {0x1383bb0, 0xc00001c158}, {0x122ef80, 0xc0003ae060})\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344 +0x430\ngithub.com/go-playground/validator/v10.(*Validate).Struct(...)\n\tD:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct(0x1778840, {0x122ef80, 0xc0003ae060})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68 +0x4e\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0x122ef80, {0x122ef80, 0xc0003ae060})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47 +0x178\ngithub.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct(0xc00011a3c0, {0x11ccd20, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45 +0x105\ngithub.com/gin-gonic/gin/binding.validate(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117\ngithub.com/gin-gonic/gin/binding.decodeJSON({0x2adec0e0008, 0xc0003a4040}, {0x11ccd20, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55 +0x9b\ngithub.com/gin-gonic/gin/binding.jsonBinding.Bind({}, 0xc0003d8330, {0x11ccd20, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37 +0x5f\ngithub.com/gin-gonic/gin.(*Context).ShouldBindWith(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706\ngithub.com/gin-gonic/gin.(*Context).ShouldBind(0xc0000ec200, {0x11ccd20, 0xc0003ae020})\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666 +0x239\nginjujin/controller.PasswordLogin(0x0)\n\tE:/后端gin/ginjujin/controller/user.go:12 +0x4c\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinRecovery.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:91 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\nginjujin/middlewares.GinLogger.func1(0xc0000ec200)\n\tE:/后端gin/ginjujin/middlewares/middlewares.go:26 +0x97\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99 +0x82\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241 +0xe7\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0001041a0, 0xc0000ec200)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0001041a0, {0x137f840, 0xc0004a21c0}, 0xc0000ec100)\n\tD:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511 +0x1d2\nnet/http.serverHandler.ServeHTTP({0x137e698}, {0x137f840, 0xc0004a21c0}, 0xc0000ec100)\n\tD:/Go/src/net/http/server.go:2878 +0x43b\nnet/http.(*conn).serve(0xc00011c640, {0x1383c20, 0xc0001096b0})\n\tD:/Go/src/net/http/server.go:1929 +0xb08\ncreated by net/http.(*Server).Serve\n\tD:/Go/src/net/http/server.go:3033 +0x4e8\n"}
+ginjujin/middlewares.GinRecovery.func1.1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:77
+runtime.gopanic
+	D:/Go/src/runtime/panic.go:1038
+github.com/go-playground/validator/v10.(*Validate).parseFieldTagsRecursive
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:289
+github.com/go-playground/validator/v10.(*Validate).extractStructCache
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/cache.go:150
+github.com/go-playground/validator/v10.(*validate).validateStruct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator.go:37
+github.com/go-playground/validator/v10.(*Validate).StructCtx
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:344
+github.com/go-playground/validator/v10.(*Validate).Struct
+	D:/GoPath/pkg/mod/github.com/go-playground/validator/v10@v10.9.0/validator_instance.go:317
+github.com/gin-gonic/gin/binding.(*defaultValidator).validateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:68
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:47
+github.com/gin-gonic/gin/binding.(*defaultValidator).ValidateStruct
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/default_validator.go:45
+github.com/gin-gonic/gin/binding.validate
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/binding.go:117
+github.com/gin-gonic/gin/binding.decodeJSON
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:55
+github.com/gin-gonic/gin/binding.jsonBinding.Bind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/binding/json.go:37
+github.com/gin-gonic/gin.(*Context).ShouldBindWith
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:706
+github.com/gin-gonic/gin.(*Context).ShouldBind
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:666
+ginjujin/controller.PasswordLogin
+	E:/后端gin/ginjujin/controller/user.go:12
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-13T17:56:53.831+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "654.6µs"}
+2021-12-13T17:59:36.922+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.0275ms"}
+2021-12-13T18:00:00.280+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "972.1µs"}
+2021-12-13T18:00:43.328+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 500, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "71.5µs"}
+2021-12-13T18:20:27.064+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T18:20:31.648+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.4229ms"}
+2021-12-13T18:21:36.100+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T18:21:48.712+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T18:21:49.856+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T18:21:52.162+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "964.7µs"}
+2021-12-13T18:26:06.401+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-13T18:35:18.590+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "503.1µs"}
+2021-12-13T18:36:10.206+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "957.6µs"}
+2021-12-13T18:36:25.501+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "839.3µs"}
+2021-12-13T18:36:52.266+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "732.7µs"}
+2021-12-14T09:50:07.912+0800	INFO	middlewares/middlewares.go:32	/v1/user/listas	{"status": 404, "method": "GET", "path": "/v1/user/listas", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", "errors": "", "cost": "0s"}

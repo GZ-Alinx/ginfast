@@ -1,0 +1,153 @@
+2021-12-14T10:07:27.810+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "username=admin&password=12311111123123123123123123123123123123123", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "388.4µs"}
+2021-12-14T11:40:35.568+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 404, "method": "GET", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-14T11:40:35.606+0800	INFO	middlewares/middlewares.go:32	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-14T11:41:04.392+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 400, "method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "770.2µs"}
+2021-12-14T11:48:08.005+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 400, "method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "11.8963ms"}
+2021-12-14T14:48:44.334+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "984.3µs"}
+2021-12-14T14:49:01.341+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.2506ms"}
+2021-12-14T14:49:07.524+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "850.6µs"}
+2021-12-14T14:50:25.907+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "76.3µs"}
+2021-12-14T14:51:02.098+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2021-12-14T14:52:14.427+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "0s"}
+2021-12-14T15:02:28.221+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "933.3µs"}
+2021-12-14T16:59:32.334+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "12.4394ms"}
+2021-12-14T16:59:43.404+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "14.771ms"}
+2021-12-14T17:00:28.705+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "13.3917ms"}
+2021-12-14T17:00:50.255+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "14.06ms"}
+2021-12-14T17:02:33.624+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "12.585ms"}
+2021-12-14T17:02:47.538+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "13.9586ms"}
+2021-12-14T17:03:05.573+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 400, "method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "840.1µs"}
+2021-12-14T17:35:32.303+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 401, "method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "537.3µs"}
+2021-12-14T18:06:57.072+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.7833ms"}
+2021-12-14T18:09:22.803+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "8.7517ms"}
+2021-12-14T18:09:49.775+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "10.2393ms"}
+2021-12-14T18:10:26.046+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "10.2145ms"}
+2021-12-14T18:10:31.575+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "11.6646ms"}
+2021-12-14T18:10:35.683+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "11.4079ms"}
+2021-12-14T18:10:48.551+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "12.4342ms"}
+2021-12-14T18:12:13.298+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 401, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "10.104ms"}
+2021-12-14T18:40:22.698+0800	ERROR	controller/user.go:106	用户注册失败
+ginjujin/controller.UserRegistry
+	E:/后端gin/ginjujin/controller/user.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-14T18:54:10.606+0800	ERROR	controller/user.go:106	用户注册失败
+ginjujin/controller.UserRegistry
+	E:/后端gin/ginjujin/controller/user.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/后端gin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	D:/GoPath/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1929
+2021-12-14T21:40:17.328+0800	INFO	middlewares/middlewares.go:32	/	{"status": 404, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-14T21:40:17.417+0800	INFO	middlewares/middlewares.go:32	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-14T21:40:27.827+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 404, "method": "GET", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36", "errors": "", "cost": "0s"}
+2021-12-14T21:40:47.891+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.0749ms"}
+2021-12-14T21:41:33.741+0800	ERROR	controller/user.go:106	用户注册失败
+ginjujin/controller.UserRegistry
+	E:/钉钉下载文件/ginjujin/ginjujin/controller/user.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/钉钉下载文件/ginjujin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/钉钉下载文件/ginjujin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	c:/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	c:/go/src/net/http/server.go:1952
+2021-12-14T21:46:01.104+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 404, "method": "GET", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36", "errors": "", "cost": "243.3µs"}
+2021-12-14T21:46:04.349+0800	ERROR	controller/user.go:106	用户注册失败
+ginjujin/controller.UserRegistry
+	E:/钉钉下载文件/ginjujin/ginjujin/controller/user.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinRecovery.func1
+	E:/钉钉下载文件/ginjujin/ginjujin/middlewares/middlewares.go:91
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+ginjujin/middlewares.GinLogger.func1
+	E:/钉钉下载文件/ginjujin/ginjujin/middlewares/middlewares.go:26
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	C:/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Go/src/net/http/server.go:1952
+2021-12-14T22:13:23.497+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "517µs"}
+2021-12-14T22:37:33.571+0800	INFO	middlewares/middlewares.go:32	/v1/user/login	{"status": 400, "method": "POST", "path": "/v1/user/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "301.4µs"}
+2021-12-14T22:39:13.008+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 401, "method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "640µs"}
+2021-12-14T22:40:42.690+0800	INFO	middlewares/middlewares.go:32	/v1/user/list	{"status": 400, "method": "POST", "path": "/v1/user/list", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": "1.5582ms"}
