@@ -31,5 +31,5 @@ func InitConfig() {
 
 	// 传递给全局变量
 	global.Settings = serverConfig
-	color.Blue("开始配置初始化中", global.Settings.LogsAddress)
+	color.Blue("开始配置初始化中")
 }

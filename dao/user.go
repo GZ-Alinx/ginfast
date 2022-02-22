@@ -66,7 +66,9 @@ func FindUserInfo(username string, password string) (*models.User,bool) {
 	return &user, true
 }
 
-func RegisterInsert(Userinfo *forms.UserRegistry) bool {
+
+// 用户注册
+func RegisterInsert(Userinfo *forms.UserRegistry) (bool,error,string) {
 	var user models.User
 	user.Username = Userinfo.Username
 	user.Role = Userinfo.Role
@@ -74,12 +76,42 @@ func RegisterInsert(Userinfo *forms.UserRegistry) bool {
 	user.Address = Userinfo.Address
 	user.Desc = Userinfo.Desc
 	user.Mobile = Userinfo.Mobile
-	user.ID = 123
-
+	if ok,status := UserCheckIsExistUserName(Userinfo.Username); !ok {
+		return false,nil,status
+	}
+	if ok,status := UserCheckIsExistMobile(Userinfo.Mobile); !ok {
+		return false,nil,status
+	}
 	result := global.DB.Create(&user)
 	if result.Error != nil {
 		color.Red("写入失败", result.Error)
-		return false
+		return false,result.Error,"数据库写入失败"
 	}
-	return  true
+	return  true,nil,"注册成功"
+}
+
+// 检查用户是否存在
+func UserCheckIsExistUserName(username string) (bool,string) {
+	var user []models.User
+	result := global.DB.Where("username = ?", username).Find(&user)
+	result.Row().Scan(&user)
+	if len(user) < 1 {
+		return true,"用户不存在，可以创建"
+	}
+	fmt.Println(user, len(user))
+	fmt.Println("用户已存在,不能创建:", user)
+	return false,"用户已存在,不能创建"
+}
+
+// 检查手机号是否存在
+func UserCheckIsExistMobile(phonenumber string) (bool,string) {
+	var user []models.User
+	result := global.DB.Where("mobile = ?", phonenumber).Find(&user)
+	result.Row().Scan(&user)
+	if len(user) < 1 {
+		return true,"手机号未使用，可以创建"
+	}
+	fmt.Println(user, len(user))
+	fmt.Println("手机号已存在,不能创建:", user)
+	return false,"手机号已存在,不能创建"
 }

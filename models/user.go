@@ -18,6 +18,8 @@ type User struct {
 	Gender string `json:"gender" gorm:"gender"`
 	Role int `json:"role" gorm:"role"`
 	Mobile string `json:"mobile" gorm:"mobile"`
+	CreatedAt    time.Time
+	UpdatedAt    time.Time
 }
 
 //用户表名称

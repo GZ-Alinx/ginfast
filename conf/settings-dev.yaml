@@ -6,15 +6,17 @@ logsAddress: "./logs/"
 
 mysql:
   username: "root"
-  host: "xxx"
+  host: "xxx.xxx.xxx.xxx"
   port: 3306
-  password: "xxx"
+  password: "xxxxxxxxx"
   dbname: "cmdb"
+  SetMaxOpenConns: 50
+  SetMaxIdleConns: 100
 
 redis:
-  host: "xxx"
+  host: "xxx.xxx.xxx.xxx"
   port: 6379
-  password: "xxx"
+  password: "xxxxxx"
   db: 01
 jwt:
   key: "DEYsnfKMSf5XWk87VIlLASEdOp1d2ZqGksGrB"

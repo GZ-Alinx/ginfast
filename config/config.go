@@ -17,6 +17,8 @@ type MysqlConfig struct {
 	User string `mapstructure:"username"`
 	PassWord string `mapstructure:"password"`
 	DBName string `mapstructure:"dbname"`
+	SetMaxOpenConns int `mapstructure:"SetMaxOpenConns"`
+	SetMaxIdleConns int `mapstructure:"SetMaxIdleConns"`
 }
 
 type RedisConfig struct {

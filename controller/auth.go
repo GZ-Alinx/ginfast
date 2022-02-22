@@ -49,9 +49,9 @@ func Login(c *gin.Context) {
 
 	// 返回数据
 	response.Success(c,200,"success", userinfoMap)
-	//c.JSON(http.StatusOK, gin.H{
-	//	"msg": "success",
-	//})
+
+	// 这里放casbin权限验证
+	c.Set("user_name",LoginForm.Username)
 }
 
 
@@ -92,9 +92,10 @@ func UserRegistry(c *gin.Context) {
 		utils.HandleValidatorError(c,err)
 		return
 	}
-	if ok := dao.RegisterInsert(&User); !ok {
+	if ok,err,msg := dao.RegisterInsert(&User); !ok {
 		color.Red("注册失败")
 		zap.L().Error("用户注册失败")
+		response.Err(c, http.StatusOK,2001,msg,err)
 		return
 	}
 	response.Success(c, http.StatusOK,"注册成功", User)
